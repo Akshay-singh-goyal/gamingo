@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaGamepad, FaSignOutAlt, FaSearch, FaBell, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube, FaBars } from "react-icons/fa";
 import axios from "axios";
 import gaminGoLogo from '../images/logo.png'; // Adjust the path according to your directory structure
+import RateCardModal from "../RateCardModal.js";
+import SupportButton from "../SupportButton.js";
 
 // Navbar Component
 const Navbar = ({ notifications, onLogout, onToggleNotifications, isNotificationsOpen, onMarkAsRead, isMobileMenuOpen, onToggleMobileMenu }) => {
@@ -82,6 +84,13 @@ const Navbar = ({ notifications, onLogout, onToggleNotifications, isNotification
                 </span>
               )}
             </button>
+             {/* Logout Button in Mobile Menu */}
+          <button
+            className="bg-[#4ADE80] text-white px-4 py-2 rounded-md mt-6 w-auto transform hover:scale-105 transition-all duration-300 mx-auto block"
+            onClick={onLogout}
+          >
+            Logout
+          </button>
 
             {isNotificationsOpen && (
               <div className="absolute top-12 left-0 w-full bg-[#1F2937] text-white rounded-lg shadow-lg">
@@ -284,7 +293,8 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-
+  <RateCardModal/>
+  <SupportButton/>
       <footer className="bg-gradient-to-r from-[#111827] to-[#374151] text-white py-12 mt-8">
           <div className="max-w-screen-xl mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
