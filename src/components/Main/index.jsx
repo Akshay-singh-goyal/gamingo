@@ -84,14 +84,21 @@ const Navbar = ({ notifications, onLogout, onToggleNotifications, isNotification
                 </span>
               )}
             </button>
+<<<<<<< HEAD
              {/* Logout Button in Mobile Menu */}
           <button
+=======
+            <button
+>>>>>>> 9feee02cf912681126728fad011767664d0c69cd
             className="bg-[#4ADE80] text-white px-4 py-2 rounded-md mt-6 w-auto transform hover:scale-105 transition-all duration-300 mx-auto block"
             onClick={onLogout}
           >
             Logout
           </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9feee02cf912681126728fad011767664d0c69cd
             {isNotificationsOpen && (
               <div className="absolute top-12 left-0 w-full bg-[#1F2937] text-white rounded-lg shadow-lg">
                 <div className="py-2 px-4 font-semibold text-lg">Notifications</div>
